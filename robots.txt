@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /info
+Disallow: /info/contact
+Disallow: /info/cookies
+Disallow: /info/copyright-notice
+Disallow: /info/disclaimer
+Disallow: /info/privacy-policy
+Disallow: /socials
+
+Sitemap: https://flashyporndeals.com/sitemap.xml

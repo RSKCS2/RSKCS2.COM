@@ -1,0 +1,133 @@
+*{
+  box-sizing: border-box;
+}
+:root{
+  --navbar-width: 20em;
+  --code-bg: rgba(0,255,0,0.5);
+  --maindoc-bg: #f8f9fa;
+}
+body{
+  background-color: var(--maindoc-bg) ;  
+}
+#navbar{
+  height: 100%;
+  width: var(--navbar-width);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0d1116;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;  
+}
+#navbar header{
+  font-size: 2em;
+  color: white;
+  margin: 0.5em 0 0 1em;
+}
+#navbar a{
+  display: block;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+#navbar a:link,
+#navbar a:visited,
+#navbar a:active{
+  color: aliceblue;
+}
+}
+.active{
+  background-color: #fff;
+}
+#navbar a:hover{
+  color: #000000;
+  background: #f8f9fa
+}
+.title{
+  margin: 0 auto;
+  text-align:center;
+  border:2px solid #f8f9fa;
+  font-size:1.5em;
+}
+
+#main-doc{
+  margin-left: var(--navbar-width);
+  padding: 0.5em 1em;
+  background-color: var(--maindoc-bg);
+}
+.main-section{
+  line-height: 1.5em
+}
+.main-section > header {
+  font-weight: bold;
+  font-size: 1.2em;  
+  line-height: 1.5em;
+  border-left: 5px solid red;
+  padding-left: 0.2em;
+  margin-bottom: 0.5em; 
+  margin-top:0.5em;
+}
+code {
+  padding: 1em 2em;
+  display: inline-block;
+  background-color: var(--code-bg);  
+  border-radius: 3px; 
+  font-size: 1.2em;
+}
+pre{
+  margin: 0;
+  padding: 0;
+}
+kbd{
+  background-color : gray;
+  padding: 0.5em;
+  border-radius: 8px;
+  color: aliceblue;
+}
+#hover-indicator{
+  position:fixed;
+  top: 35px;
+  left: 5px;  
+  color: green;
+  z-index: 0;
+  font-size: 1.8em;
+  padding: 0;
+}
+#hover-indicator span{
+  margin:0;
+  padding:0;
+  
+}
+#arrow1{
+  animation: shine 1.5s infinite;
+}
+#arrow2{
+  animation: shine 1.5s infinite;
+  animation-delay: 0.3s;
+}
+#arrow3{
+  animation: shine 1.5s infinite;
+  animation-delay: 0.6s;
+}
+@keyframes shine{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@media (hover:on-demand), (max-width: 768px){
+  #navbar{       
+    width: 5px;  
+    transition: width 1s;
+  }   
+  #navbar:hover{
+    width: 50vw;    
+  }
+  #main-doc,.main-section{
+    margin: 0.2em;
+    padding: 0;   
+    overflow: hidden;
+  }
+}
